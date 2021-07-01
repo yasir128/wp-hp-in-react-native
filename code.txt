@@ -1,0 +1,43 @@
+// import React, {Component} from 'react';
+// import {NavigationContainer} from '@react-navigation/native';
+// import {createStackNavigator} from '@react-navigation/stack';
+
+
+import React, {Component} from 'react';
+import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+class App extends Component {
+  render() {
+    return (
+      <View style={styles.MainView}>
+        <Image
+          source={require('./src/Assets/MobileComp.png')}
+          style={styles.imgStyle}
+        />
+        <Text style={styles.txtStyle}>React Native</Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  MainView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imgStyle: {
+    width: wp('100%'),
+    height: hp('20%'),
+  },
+  txtStyle: {
+    marginTop: '10%',
+    fontSize: hp('3%'),
+  },
+});
+
+export default App;
